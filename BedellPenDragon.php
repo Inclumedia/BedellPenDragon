@@ -35,8 +35,7 @@ $wgExtensionCredits['parserhook'][] = array(
         'name' => 'BedellPenDragon',
         'author' => 'Nathan Larson',
         'url' => 'https://mediawiki.org/wiki/Extension:BedellPenDragon',
-        'description' => 'Adds <nowiki><randompageincat> tag and {{#setbpdprop ... }} and '
-                . '{{#getbpdprop ...}}</nowiki> parser functions and special pages',
+        'descriptionmsg' => 'bedellpendragon-desc',
         'version' => '1.0.12'
 );
 
@@ -49,7 +48,7 @@ $wgAutoloadClasses['SpecialQuoteList'] = __DIR__ . '/SpecialQuoteList.php';
 $wgAutoloadClasses['SpecialVideoList'] = __DIR__ . '/SpecialVideoList.php';
 $wgExtensionFunctions[] = "BedellPenDragon::randomPageInCatSetHook";
 $wgHooks['ParserFirstCallInit'][] = 'BedellPenDragon::setupParserFunctions';
-$wgHooks[ 'RefCallback' ][] = 'BedellPenDragon::refCallback';
+$wgHooks['RefCallback'][] = 'BedellPenDragon::refCallback';
 
 define( 'BPD_NOPROPSET', 'No prop set!' );
 $wgBedellPenDragonResident = true;
